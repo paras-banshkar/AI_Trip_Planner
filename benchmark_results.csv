@@ -1,0 +1,9 @@
+query,expected_destination,success,latency_seconds,response_length_chars,mentions_destination,error
+Plan a 3-day trip to Jaipur,Jaipur,True,9.68,4609,True,
+Plan a 5-day budget trip to Goa,Goa,True,9.29,3813,True,
+Weekend trip to Manali with adventure activities,Manali,True,16.42,5388,True,
+Plan a 4-day family trip to Kerala with kids,Kerala,True,20.61,2061,True,
+Luxury 3-day honeymoon trip to Udaipur,Udaipur,True,10.18,4140,True,
+Solo backpacking trip to Rishikesh for 4 days,Rishikesh,True,18.64,2054,True,
+Plan a 6-day trip to Ladakh covering major attractions,Ladakh,True,14.06,2413,True,
+2-day quick trip to Pondicherry with beach activities,Pondicherry,True,26.37,1945,True,
