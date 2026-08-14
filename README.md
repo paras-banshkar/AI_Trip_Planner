@@ -190,14 +190,26 @@ curl -X POST http://localhost:8000/query \
 
 ---
 
+## ✅ Recent Improvements
+
+- **Graph now built once at startup**, not on every `/query` call — the LangGraph agent and its Mermaid diagram used to be rebuilt/regenerated per request; both are now cached and initialized once via a FastAPI startup event.
+- **Structured logging** (`logger/logging.py`) — rotating file handler + console output across the agent, model loader, and external API calls (weather/places/currency), replacing the previous empty stub.
+- **Custom exception handling** (`exception/exceptionhandling.py`) — wraps errors with the originating file/line for easier debugging, replacing the previous empty stub.
+- **Fixed a live bug**: `get_current_weather` was missing `units=metric`, so OpenWeatherMap returned Kelvin while the tool labeled it °C.
+- **Fixed a config bug**: the OpenAI provider ignored the model name in `config.yaml` and silently hardcoded `o4-mini`.
+- **Fixed a Streamlit bug**: `raise f"..."` (raising a string, which isn't valid Python) has been replaced with proper error display.
+- **Wired up chat history** in the Streamlit UI (previously initialized but never displayed) and optional itinerary export via `save_to_file` in the `/query` request body.
+- Removed unused/dead code (`tools/arthamatic_op_tool.py`, an experimental Alpha Vantage integration that was never registered with the agent).
+- Added a `/health` endpoint for readiness checks.
+
 ## 🗺️ Roadmap Ideas
 
-- [ ] Persist chat history / past itineraries per user
-- [ ] Export itinerary as PDF (see `utils/save_to_document.py`)
+- [ ] Persist chat history / past itineraries per user across sessions (server-side)
+- [ ] Export itinerary as PDF (currently Markdown only, via `utils/save_to_document.py`)
 - [ ] Support multi-city trips
 - [ ] Add authentication for the API
-- [ ] Move Mermaid graph visualization out of the request path (currently regenerated on every `/query` call)
-- [ ] Add automated tests
+- [ ] Add automated tests (unit tests for tools/utils, integration test for `/query`)
+- [ ] Containerize with Docker for easier deployment
 
 ---
 
