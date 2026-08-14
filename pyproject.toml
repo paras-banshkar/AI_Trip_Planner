@@ -17,3 +17,33 @@ ai-trip-planner = "ai_trip_planner:main"
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+# Every `pytest` run now also:
+#   --cov=.                     measures coverage across the whole project
+#   --cov-report=term-missing   prints per-file % + missed line numbers to console
+#   --cov-report=html:htmlcov   writes a browsable HTML report to htmlcov/
+#   --cov-report=xml            writes coverage.xml (machine-readable, for the summary script / CI)
+#   --junitxml=test_results.xml writes machine-readable pass/fail results
+addopts = "-v --cov=. --cov-report=term-missing --cov-report=html:htmlcov --cov-report=xml --junitxml=test_results.xml"
+
+[tool.coverage.run]
+# Don't count the tests themselves, or one-off scripts, toward "code coverage."
+omit = [
+    "tests/*",
+    "notebook/*",
+    "eval/*",
+    "*/__init__.py",
+    "streamlit_app.py",
+]
+
+[tool.coverage.report]
+# Lines that don't need test coverage (defensive/startup code, not core logic).
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]
+

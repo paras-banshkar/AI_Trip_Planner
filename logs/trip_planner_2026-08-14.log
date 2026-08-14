@@ -22,3 +22,85 @@
 2026-08-14 20:11:09,570 | INFO     | main | Agent graph ready.
 2026-08-14 20:11:55,238 | INFO     | main | Received query: 'plan a two days trip to jaipur'
 2026-08-14 20:12:01,772 | INFO     | main | Query handled successfully.
+2026-08-14 23:34:33,815 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:34:33,817 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-14 23:34:33,817 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-14 23:34:33,817 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-14 23:34:33,817 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-14 23:34:35,138 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-14 23:34:35,167 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-14 23:34:35,175 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-14 23:34:35,770 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-14 23:34:35,770 | INFO     | main | Agent graph ready.
+2026-08-14 23:35:12,027 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:35:12,030 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-0\test_health_ok_after_startup0
+2026-08-14 23:35:12,030 | INFO     | main | Agent graph ready.
+2026-08-14 23:35:12,043 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:35:12,043 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-0\test_returns_answer_for_valid_0
+2026-08-14 23:35:12,043 | INFO     | main | Agent graph ready.
+2026-08-14 23:35:12,052 | INFO     | main | Received query: 'Plan a 3-day trip to Goa'
+2026-08-14 23:35:12,052 | INFO     | main | Query handled successfully.
+2026-08-14 23:35:12,066 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:35:12,068 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-0\test_missing_question_returns_0
+2026-08-14 23:35:12,069 | INFO     | main | Agent graph ready.
+2026-08-14 23:35:12,086 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:35:12,086 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-0\test_save_to_file_flag_returns0
+2026-08-14 23:35:12,086 | INFO     | main | Agent graph ready.
+2026-08-14 23:35:12,089 | INFO     | main | Received query: 'Plan a 2-day trip to Pondicherry'
+2026-08-14 23:35:12,089 | INFO     | main | Itinerary saved to /tmp/fake_itinerary.md
+2026-08-14 23:35:12,089 | INFO     | main | Query handled successfully.
+2026-08-14 23:35:40,832 | WARNING  | utils.weather_info | Weather lookup failed for 'Nowhereland': status=404, body={}
+2026-08-14 23:35:53,173 | INFO     | utils.currency_converter | Converted 100.0 USD -> 8300.00 INR
+2026-08-14 23:35:53,173 | INFO     | utils.currency_converter | Converted 100.0 USD -> 90.00 EUR
+2026-08-14 23:35:53,192 | ERROR    | utils.currency_converter | Currency API call failed: 403 {}
+2026-08-14 23:36:31,563 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:36:31,563 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-1\test_health_ok_after_startup0
+2026-08-14 23:36:31,563 | INFO     | main | Agent graph ready.
+2026-08-14 23:36:31,577 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:36:31,577 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-1\test_returns_answer_for_valid_0
+2026-08-14 23:36:31,577 | INFO     | main | Agent graph ready.
+2026-08-14 23:36:31,582 | INFO     | main | Received query: 'Plan a 3-day trip to Goa'
+2026-08-14 23:36:31,582 | INFO     | main | Query handled successfully.
+2026-08-14 23:36:31,593 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:36:31,593 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-1\test_missing_question_returns_0
+2026-08-14 23:36:31,596 | INFO     | main | Agent graph ready.
+2026-08-14 23:36:31,610 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:36:31,613 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-1\test_save_to_file_flag_returns0
+2026-08-14 23:36:31,613 | INFO     | main | Agent graph ready.
+2026-08-14 23:36:31,614 | INFO     | main | Received query: 'Plan a 2-day trip to Pondicherry'
+2026-08-14 23:36:31,614 | INFO     | main | Itinerary saved to /tmp/fake_itinerary.md
+2026-08-14 23:36:31,614 | INFO     | main | Query handled successfully.
+2026-08-14 23:36:31,654 | INFO     | utils.currency_converter | Converted 100.0 USD -> 8300.00 INR
+2026-08-14 23:36:31,654 | INFO     | utils.currency_converter | Converted 100.0 USD -> 90.00 EUR
+2026-08-14 23:36:31,668 | ERROR    | utils.currency_converter | Currency API call failed: 403 {}
+2026-08-14 23:36:31,681 | WARNING  | utils.weather_info | Weather lookup failed for 'Nowhereland': status=404, body={}
+2026-08-14 23:37:03,105 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-14 23:37:03,105 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-14 23:37:03,111 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-14 23:37:03,111 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-14 23:37:04,368 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-14 23:37:04,383 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-14 23:37:04,396 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-14 23:37:17,889 | INFO     | utils.currency_converter | Converted 500.0 USD -> 47736.65 INR
+2026-08-14 23:37:41,174 | ERROR    | agent.agentic_workflow | Agent step failed: Error code: 400 - {'error': {'message': 'tool call validation failed: parameters for tool estimate_total_hotel_cost did not match schema: errors: [`/total_days`: expected number, but got string]', 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '### Plan a 3-day trip to Goa with a full budget breakdown\n#### Day 1:\n- Morning: Check-in at a hotel in North Goa, such as the **Lemon Tree Hotel** (approx. ₹5,000 per night).\n- Afternoon: Visit the **Baga Beach** and enjoy water sports like parasailing, jet-skiing, and banana boat rides (approx. ₹500-₹1,000 per person).\n- Evening: Have dinner at a local restaurant like **Infantaria** (approx. ₹500-₹1,000 per person).\n#### Day 2:\n- Morning: Visit the **Dudhsagar Waterfall** (approx. ₹100-₹200 per person).\n- Afternoon: Explore the **Old Goa** and visit the **Basilica of Bom Jesus** (free entry).\n- Evening: Enjoy a sunset cruise on the **Mandovi River** (approx. ₹1,000-₹2,000 per person).\n#### Day 3:\n- Morning: Visit the **Palolem Beach** and take a yoga class (approx. ₹500-₹1,000 per person).\n- Afternoon: Go on a **snorkeling trip** to the **Grand Island** (approx. ₹1,500-₹3,000 per person).\n- Evening: Have dinner at a local restaurant like **The Fish Factory** (approx. ₹500-₹1,000 per person).\n\n#### Budget Breakdown:\n- Accommodation (2 nights): ₹10,000-₹20,000\n- Food and drink: ₹5,000-₹10,000\n- Transportation: ₹2,000-₹5,000\n- Activities and entry fees: ₹3,000-₹6,000\n- Total: ₹20,000-₹41,000\n\n<function=estimate_total_hotel_cost>{"price_per_night": "5000", "total_days": "3"}</function>\n'}}
+2026-08-14 23:38:12,420 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:38:12,420 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-2\test_health_ok_after_startup0
+2026-08-14 23:38:12,420 | INFO     | main | Agent graph ready.
+2026-08-14 23:38:12,459 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:38:12,461 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-2\test_returns_answer_for_valid_0
+2026-08-14 23:38:12,461 | INFO     | main | Agent graph ready.
+2026-08-14 23:38:12,471 | INFO     | main | Received query: 'Plan a 3-day trip to Goa'
+2026-08-14 23:38:12,473 | INFO     | main | Query handled successfully.
+2026-08-14 23:38:12,490 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:38:12,490 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-2\test_missing_question_returns_0
+2026-08-14 23:38:12,490 | INFO     | main | Agent graph ready.
+2026-08-14 23:38:12,511 | INFO     | main | Building agent graph at startup...
+2026-08-14 23:38:12,513 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-2\test_save_to_file_flag_returns0
+2026-08-14 23:38:12,513 | INFO     | main | Agent graph ready.
+2026-08-14 23:38:12,519 | INFO     | main | Received query: 'Plan a 2-day trip to Pondicherry'
+2026-08-14 23:38:12,520 | INFO     | main | Itinerary saved to /tmp/fake_itinerary.md
+2026-08-14 23:38:12,520 | INFO     | main | Query handled successfully.
+2026-08-14 23:38:12,585 | INFO     | utils.currency_converter | Converted 100.0 USD -> 8300.00 INR
+2026-08-14 23:38:12,614 | INFO     | utils.currency_converter | Converted 100.0 USD -> 90.00 EUR
+2026-08-14 23:38:12,657 | ERROR    | utils.currency_converter | Currency API call failed: 403 {}
+2026-08-14 23:38:12,671 | WARNING  | utils.weather_info | Weather lookup failed for 'Nowhereland': status=404, body={}

@@ -1,0 +1,6 @@
+query,expected_any_of,tools_called,correct_tool_used
+What's the weather like in Manali right now?,"get_current_weather,get_weather_forecast",get_current_weather,True
+What are the top attractions in Jaipur?,search_attractions,"ERROR: Error occurred in script [C:\Users\bansh\AI_Trip_Planner\agent\agentic_workflow.py] at line [51]: Error code: 400 - {'error': {'message': ""Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details."", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=search_attractions{""place"": ""Jaipur""}</function>'}}",False
+Convert 500 USD to INR,convert_currency,convert_currency,True
+"If a hotel costs 2000 INR per night for 5 nights, what's the total?","calculate_total_expense,estimate_total_hotel_cost",estimate_total_hotel_cost,True
+Plan a 3-day trip to Goa with a full budget breakdown,"calculate_daily_expense_budget,calculate_total_expense,estimate_total_hotel_cost,get_current_weather,get_weather_forecast,search_attractions,search_restaurants","get_current_weather,get_weather_forecast,search_activities,search_attractions,search_restaurants,search_transportation",True

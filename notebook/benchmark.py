@@ -140,7 +140,7 @@ def main():
     print("=" * 60)
 
     # ---- Save to CSV ----
-    with open("benchmark_results.csv", "w", newline="") as f:
+    with open("benchmark_results.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(asdict(results[0]).keys()))
         writer.writeheader()
         for r in results:

@@ -1,0 +1,134 @@
+2026-08-15 03:27:37,818 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:27:37,818 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:27:37,818 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:27:37,819 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:27:37,819 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:27:38,386 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:27:38,393 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:27:38,407 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:27:39,362 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-15 03:27:39,362 | INFO     | main | Agent graph ready.
+2026-08-15 03:28:06,552 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:28:06,553 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:28:06,553 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:28:06,554 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:28:06,554 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:28:07,127 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:28:07,133 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:28:07,138 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:28:07,444 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-15 03:28:07,444 | INFO     | main | Agent graph ready.
+2026-08-15 03:28:55,043 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:28:55,043 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:28:55,043 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:28:55,044 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:28:55,044 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:28:55,610 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:28:55,617 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:28:55,622 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:28:55,899 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-15 03:28:55,899 | INFO     | main | Agent graph ready.
+2026-08-15 03:30:25,991 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:30:25,992 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:30:25,992 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:30:25,993 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:30:25,993 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:30:26,588 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:30:26,599 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:30:26,603 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:30:26,870 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-15 03:30:26,870 | INFO     | main | Agent graph ready.
+2026-08-15 03:31:24,988 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:31:24,988 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:31:24,988 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:31:24,991 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:31:24,991 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:31:25,602 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:31:25,610 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:31:25,614 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:31:25,908 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-15 03:31:25,908 | INFO     | main | Agent graph ready.
+2026-08-15 03:33:41,295 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:33:41,295 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:33:41,295 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:33:41,297 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:33:41,297 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:33:41,841 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:33:41,848 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:33:41,854 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:33:42,122 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-15 03:33:42,122 | INFO     | main | Agent graph ready.
+2026-08-15 03:35:42,288 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:35:42,291 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-3\test_health_ok_after_startup0
+2026-08-15 03:35:42,291 | INFO     | main | Agent graph ready.
+2026-08-15 03:35:42,346 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:35:42,346 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-3\test_returns_answer_for_valid_0
+2026-08-15 03:35:42,347 | INFO     | main | Agent graph ready.
+2026-08-15 03:35:42,351 | INFO     | main | Received query: 'Plan a 3-day trip to Goa'
+2026-08-15 03:35:42,351 | INFO     | main | Query handled successfully.
+2026-08-15 03:35:42,360 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:35:42,361 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-3\test_missing_question_returns_0
+2026-08-15 03:35:42,361 | INFO     | main | Agent graph ready.
+2026-08-15 03:35:42,376 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:35:42,377 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-3\test_save_to_file_flag_returns0
+2026-08-15 03:35:42,377 | INFO     | main | Agent graph ready.
+2026-08-15 03:35:42,382 | INFO     | main | Received query: 'Plan a 2-day trip to Pondicherry'
+2026-08-15 03:35:42,383 | INFO     | main | Itinerary saved to /tmp/fake_itinerary.md
+2026-08-15 03:35:42,383 | INFO     | main | Query handled successfully.
+2026-08-15 03:35:59,874 | WARNING  | utils.weather_info | Weather lookup failed for 'Nowhereland': status=404, body={}
+2026-08-15 03:36:13,988 | INFO     | utils.currency_converter | Converted 100.0 USD -> 8300.00 INR
+2026-08-15 03:36:14,015 | INFO     | utils.currency_converter | Converted 100.0 USD -> 90.00 EUR
+2026-08-15 03:36:14,029 | ERROR    | utils.currency_converter | Currency API call failed: 403 {}
+2026-08-15 03:36:38,235 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:36:38,236 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-4\test_health_ok_after_startup0
+2026-08-15 03:36:38,236 | INFO     | main | Agent graph ready.
+2026-08-15 03:36:38,280 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:36:38,281 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-4\test_returns_answer_for_valid_0
+2026-08-15 03:36:38,282 | INFO     | main | Agent graph ready.
+2026-08-15 03:36:38,285 | INFO     | main | Received query: 'Plan a 3-day trip to Goa'
+2026-08-15 03:36:38,286 | INFO     | main | Query handled successfully.
+2026-08-15 03:36:38,296 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:36:38,297 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-4\test_missing_question_returns_0
+2026-08-15 03:36:38,297 | INFO     | main | Agent graph ready.
+2026-08-15 03:36:38,313 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:36:38,313 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-4\test_save_to_file_flag_returns0
+2026-08-15 03:36:38,314 | INFO     | main | Agent graph ready.
+2026-08-15 03:36:38,318 | INFO     | main | Received query: 'Plan a 2-day trip to Pondicherry'
+2026-08-15 03:36:38,318 | INFO     | main | Itinerary saved to /tmp/fake_itinerary.md
+2026-08-15 03:36:38,318 | INFO     | main | Query handled successfully.
+2026-08-15 03:36:38,378 | INFO     | utils.currency_converter | Converted 100.0 USD -> 8300.00 INR
+2026-08-15 03:36:38,384 | INFO     | utils.currency_converter | Converted 100.0 USD -> 90.00 EUR
+2026-08-15 03:36:38,401 | ERROR    | utils.currency_converter | Currency API call failed: 403 {}
+2026-08-15 03:36:38,418 | WARNING  | utils.weather_info | Weather lookup failed for 'Nowhereland': status=404, body={}
+2026-08-15 03:37:04,504 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:37:04,505 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-5\test_health_ok_after_startup0
+2026-08-15 03:37:04,505 | INFO     | main | Agent graph ready.
+2026-08-15 03:37:04,553 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:37:04,555 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-5\test_returns_answer_for_valid_0
+2026-08-15 03:37:04,555 | INFO     | main | Agent graph ready.
+2026-08-15 03:37:04,559 | INFO     | main | Received query: 'Plan a 3-day trip to Goa'
+2026-08-15 03:37:04,559 | INFO     | main | Query handled successfully.
+2026-08-15 03:37:04,568 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:37:04,568 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-5\test_missing_question_returns_0
+2026-08-15 03:37:04,570 | INFO     | main | Agent graph ready.
+2026-08-15 03:37:04,584 | INFO     | main | Building agent graph at startup...
+2026-08-15 03:37:04,585 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AppData\Local\Temp\pytest-of-bansh\pytest-5\test_save_to_file_flag_returns0
+2026-08-15 03:37:04,585 | INFO     | main | Agent graph ready.
+2026-08-15 03:37:04,589 | INFO     | main | Received query: 'Plan a 2-day trip to Pondicherry'
+2026-08-15 03:37:04,589 | INFO     | main | Itinerary saved to /tmp/fake_itinerary.md
+2026-08-15 03:37:04,589 | INFO     | main | Query handled successfully.
+2026-08-15 03:37:04,628 | INFO     | utils.currency_converter | Converted 100.0 USD -> 8300.00 INR
+2026-08-15 03:37:04,633 | INFO     | utils.currency_converter | Converted 100.0 USD -> 90.00 EUR
+2026-08-15 03:37:04,647 | ERROR    | utils.currency_converter | Currency API call failed: 403 {}
+2026-08-15 03:37:04,660 | WARNING  | utils.weather_info | Weather lookup failed for 'Nowhereland': status=404, body={}
+2026-08-15 03:41:18,605 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-15 03:41:18,605 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-15 03:41:18,606 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-15 03:41:18,606 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-15 03:41:19,232 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-15 03:41:19,240 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-15 03:41:19,245 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-15 03:41:20,101 | ERROR    | agent.agentic_workflow | Agent step failed: Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=search_attractions{"place": "Jaipur"}</function>'}}
+2026-08-15 03:41:20,963 | INFO     | utils.currency_converter | Converted 500.0 USD -> 47736.65 INR
+2026-08-15 03:49:48,113 | INFO     | main | Received query: 'plan 5 days trip to mumbai'
+2026-08-15 03:49:59,890 | INFO     | main | Query handled successfully.
