@@ -1,0 +1,24 @@
+2026-08-14 20:04:27,276 | INFO     | main | Building agent graph at startup...
+2026-08-14 20:04:27,276 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-14 20:04:27,276 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-14 20:04:27,290 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-14 20:04:27,290 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-14 20:04:28,221 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-14 20:04:28,235 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-14 20:04:28,236 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-14 20:04:29,236 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-14 20:04:29,236 | INFO     | main | Agent graph ready.
+2026-08-14 20:05:18,416 | INFO     | main | Received query: 'plan a 2 days trip to surat'
+2026-08-14 20:05:20,416 | ERROR    | main | Error handling query: CalculatorTool._setup_tools.<locals>.calculate_total_expense() got an unexpected keyword argument 'costs'
+2026-08-14 20:11:07,502 | INFO     | main | Building agent graph at startup...
+2026-08-14 20:11:07,502 | INFO     | agent.agentic_workflow | Initializing GraphBuilder with provider=groq
+2026-08-14 20:11:07,502 | INFO     | utils.model_loader | Loading config from config/config.yaml
+2026-08-14 20:11:07,503 | INFO     | utils.model_loader | Loading LLM for provider: groq
+2026-08-14 20:11:07,503 | INFO     | utils.model_loader | Using Groq model: llama-3.3-70b-versatile
+2026-08-14 20:11:08,362 | INFO     | agent.agentic_workflow | Registered 10 tools with the agent.
+2026-08-14 20:11:08,369 | INFO     | agent.agentic_workflow | Building LangGraph StateGraph...
+2026-08-14 20:11:08,373 | INFO     | agent.agentic_workflow | Graph compiled successfully.
+2026-08-14 20:11:09,570 | INFO     | main | Graph diagram saved as 'my_graph.png' in C:\Users\bansh\AI_Trip_Planner
+2026-08-14 20:11:09,570 | INFO     | main | Agent graph ready.
+2026-08-14 20:11:55,238 | INFO     | main | Received query: 'plan a two days trip to jaipur'
+2026-08-14 20:12:01,772 | INFO     | main | Query handled successfully.

@@ -1,6 +1,10 @@
 import requests
 from langchain_tavily import TavilySearch
 
+from logger.logging import get_logger
+
+logger = get_logger(__name__)
+
 
 class GeoapifyPlaceSearchTool:
     """
@@ -45,6 +49,7 @@ class GeoapifyPlaceSearchTool:
         if not features:
             # Explicitly raise instead of returning None/empty string so the
             # caller's except-block fallback (Tavily) always gets triggered.
+            logger.warning(f"Geoapify returned no results for '{categories}' near '{place}', falling back to Tavily.")
             raise ValueError(f"No results found for categories '{categories}' near {place}")
 
         results = []

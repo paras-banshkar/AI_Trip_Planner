@@ -1,5 +1,9 @@
 import requests
 
+from logger.logging import get_logger
+
+logger = get_logger(__name__)
+
 
 class CurrencyConverter:
     def __init__(self, api_key: str):
@@ -16,10 +20,20 @@ class CurrencyConverter:
             raise ValueError(f"convert_currency received a non-numeric 'amount': {amount!r}")
 
         url = f"{self.base_url}/{from_currency}"
-        response = requests.get(url)
+        try:
+            response = requests.get(url, timeout=10)
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Currency API request failed: {e}")
+            raise
+
         if response.status_code != 200:
-            raise Exception("API call failed:", response.json())
+            logger.error(f"Currency API call failed: {response.status_code} {response.text}")
+            raise Exception(f"API call failed: {response.text}")
+
         rates = response.json()["conversion_rates"]
         if to_currency not in rates:
             raise ValueError(f"{to_currency} not found in exchange rates.")
-        return amount * rates[to_currency]
+
+        result = amount * rates[to_currency]
+        logger.info(f"Converted {amount} {from_currency} -> {result:.2f} {to_currency}")
+        return result
