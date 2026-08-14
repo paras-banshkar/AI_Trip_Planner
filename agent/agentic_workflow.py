@@ -44,15 +44,39 @@ class GraphBuilder:
             raise TripPlannerException(e, sys) from e
 
     def agent_function(self, state: MessagesState):
-        """Main agent node: injects the system prompt and calls the LLM (with tools bound)."""
-        try:
-            user_question = state["messages"]
-            input_question = [self.system_prompt] + user_question
-            response = self.llm_with_tools.invoke(input_question)
-            return {"messages": [response]}
-        except Exception as e:
-            logger.error(f"Agent step failed: {e}")
-            raise TripPlannerException(e, sys) from e
+        """
+        Main agent node: injects the system prompt and calls the LLM (with
+        tools bound).
+
+        Retries once on a transient tool-calling failure (observed with
+        Groq's llama-3.3-70b: it occasionally emits malformed function-call
+        syntax like `<function=foo{"x": 1}</function>` missing the closing
+        `>`, which the API rejects with a 400 'tool_use_failed' error).
+        Retrying the same request usually succeeds on the second attempt
+        since it's a generation quirk, not a deterministic bug. Any other
+        kind of error is raised immediately without retrying.
+        """
+        user_question = state["messages"]
+        input_question = [self.system_prompt] + user_question
+
+        last_error = None
+        for attempt in range(1, 3):  # try once, retry once on tool_use_failed
+            try:
+                response = self.llm_with_tools.invoke(input_question)
+                return {"messages": [response]}
+            except Exception as e:
+                last_error = e
+                is_transient_tool_call_error = "tool_use_failed" in str(e)
+                if is_transient_tool_call_error and attempt == 1:
+                    logger.warning(
+                        f"Transient tool-call failure on attempt {attempt}, retrying once: {e}"
+                    )
+                    continue
+                logger.error(f"Agent step failed on attempt {attempt}: {e}")
+                raise TripPlannerException(e, sys) from e
+
+        # Unreachable, but keeps type-checkers happy.
+        raise TripPlannerException(last_error, sys)
 
     def build_graph(self):
         logger.info("Building LangGraph StateGraph...")
