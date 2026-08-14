@@ -1,5 +1,7 @@
 # 🌍 AI Trip Planner
 
+![Tests](https://github.com/paras-banshkar/AI_Trip_Planner/actions/workflows/tests.yml/badge.svg)
+
 An agentic travel-planning application that turns a simple natural-language request — like *"Plan a trip to Goa for 5 days"* — into a complete, structured travel itinerary. Built with **LangGraph** for agentic reasoning, **FastAPI** for the backend, and **Streamlit** for the chat interface.
 
 The agent doesn't just generate text — it reasons step-by-step and calls real tools (weather, places, currency, budget) to ground its plan in live data before composing the final itinerary.
@@ -190,6 +192,42 @@ curl -X POST http://localhost:8000/query \
 
 ---
 
+## 🧪 Testing & Evaluation
+
+This project has two layers of evaluation: a standard **unit/integration test suite** (fast, mocked, runs in CI on every push) and an **agent-level evaluation harness** (runs against the real LLM to measure whether the agent behaves correctly, not just whether the code doesn't crash).
+
+### Unit & integration tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+- **50 tests**, all mocked (no real API keys or network calls needed) — safe to run in CI with zero secrets configured.
+- **70% line coverage** overall, concentrated on the tools/utils the agent actually calls (`expense_calculator.py`, `expense_calculator_tool.py`, `currency_converter.py`, `place_search_tool.py`, `place_info_search.py` all at 79–100%).
+- Every run also generates `coverage.xml`, `test_results.xml` (JUnit), and a browsable `htmlcov/index.html` report (see `pyproject.toml`'s `[tool.pytest.ini_options]`).
+- Tests are split across two levels deliberately: some call `Calculator`/`CurrencyConverter` etc. directly, others invoke the LangChain-wrapped tools via `.invoke()` the way the agent actually calls them — the latter is what caught a real bug (below) that direct unit tests missed entirely.
+
+### Agent evaluation: `eval/tool_call_accuracy.py`
+
+Runs the real compiled LangGraph agent against a fixed set of queries and checks whether it invokes the *correct* tool for each — not just whether the final answer looks plausible.
+
+```bash
+python eval/tool_call_accuracy.py
+```
+
+| Stage | Tool-call accuracy | What changed |
+|---|---|---|
+| Baseline | 60% (3/5) | — |
+| After fixing a tool type-hint bug | 80% (4/5) | `estimate_total_hotel_cost`'s `price_per_night` was typed `str` instead of `float`, corrupting the generated tool schema |
+| After adding retry + fixing a schema-wiring bug | **100% (5/5)** | Added a single retry for transient `tool_use_failed` errors from the LLM provider, and fixed `calculate_total_expense(*costs)` — a `*args` signature that can't receive the keyword argument LangChain's schema-based invocation sends it |
+
+Two of these were genuine production bugs the eval harness caught that standard unit tests could not, because they lived in the *tool-schema-to-Python-function wiring* layer rather than in the underlying logic itself.
+
+There's also a benchmark script in `notebook/benchmark.py` measuring end-to-end latency and destination-grounding across varied trip queries (100% grounding, ~15s average latency at last run).
+
+---
+
 ## ✅ Recent Improvements
 
 - **Graph now built once at startup**, not on every `/query` call — the LangGraph agent and its Mermaid diagram used to be rebuilt/regenerated per request; both are now cached and initialized once via a FastAPI startup event.
@@ -201,6 +239,12 @@ curl -X POST http://localhost:8000/query \
 - **Wired up chat history** in the Streamlit UI (previously initialized but never displayed) and optional itinerary export via `save_to_file` in the `/query` request body.
 - Removed unused/dead code (`tools/arthamatic_op_tool.py`, an experimental Alpha Vantage integration that was never registered with the agent).
 - Added a `/health` endpoint for readiness checks.
+- **Fixed a tool-schema bug**: `estimate_total_hotel_cost`'s `price_per_night` was typed `str` instead of `float`, corrupting the tool's generated JSON schema and causing both `TypeError`s and LLM-provider validation failures.
+- **Fixed a tool-wiring bug**: `calculate_total_expense` used a `*costs: float` signature, which can't accept the keyword argument LangChain's schema-based tool invocation actually sends it — every call to this tool failed regardless of what the model generated.
+- **Added retry handling** for transient `tool_use_failed` errors from the LLM provider (a Groq/llama-3.3-70b quirk where it occasionally emits malformed function-call syntax) — retries once before raising.
+- **Added a pytest suite** (50 tests, 70% coverage) and a tool-call-accuracy evaluation harness (`eval/tool_call_accuracy.py`) — see [Testing & Evaluation](#-testing--evaluation) above.
+- **Added CI** (GitHub Actions) running the full test suite on every push/PR.
+- **Added Docker support** (`Dockerfile`) for containerized deployment.
 
 ## 🗺️ Roadmap Ideas
 
@@ -208,8 +252,7 @@ curl -X POST http://localhost:8000/query \
 - [ ] Export itinerary as PDF (currently Markdown only, via `utils/save_to_document.py`)
 - [ ] Support multi-city trips
 - [ ] Add authentication for the API
-- [ ] Add automated tests (unit tests for tools/utils, integration test for `/query`)
-- [ ] Containerize with Docker for easier deployment
+- [ ] Expand test coverage on `agent/agentic_workflow.py` (52%), `utils/model_loader.py` (46%), and `tools/weather_info_tool.py` (24%)
 
 ---
 
